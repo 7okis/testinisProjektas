@@ -1,0 +1,220 @@
+:root {
+    --hero-primary: #F15A24;
+    --main-dark: #1A1A1A;
+    --main-paragraph: #4E4B66;
+    --main-white: #FFFFFF;
+    --main-stitch: #F7F7F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #4E4B66;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    margin-right: 20px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-paragraph);
+}
+
+h1 {
+    font-size: 61px;
+    font-weight: 900;
+    line-height: 120%;
+    color: var(--main-dark);
+    margin-bottom: 16px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name img {
+    height: 32px;
+    margin-right: 10px;
+}
+
+.contact-btn a {
+    background-color: var(--main-white);
+    border: 2px solid var(--hero-primary);
+    border-radius: 24px;
+    color: var(--hero-primary);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p.large {
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--main-paragraph);
+    margin-bottom: 24px;
+    /* display: flex; */
+    /* flex-direction: column; */
+
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically */
+    flex: 1;
+    align-items: flex-start;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h1 {
+    margin-bottom: 24px;
+    font-size: 61px;
+    font-weight: 900;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    padding: 16px 24px;
+    background-color: var(--hero-primary);
+    color: var(--main-white);
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 12px; /* Optional: Adjust margin if needed */
+    display: inline-block;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for hover effects */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.card {
+    background-color: var(--main-stitch);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 20px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: var(--hero-primary);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 904px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 944px) {
+    .hero .container {
+        flex-direction: column; /* Stack hero elements vertically */
+        text-align: center;
+    }
+
+    .hero-right {
+        align-items: center;
+    }
+
+    .button {
+        width: 100%; /* Make button full width on small screens */
+        margin-top: 24px; /* Add margin between paragraph and button */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu, .contact-btn {
+        display: none; /* Hide the menu and button */
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger icon */
+    }
+}
+a:hover {
+    color: var(--hero-primary); /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Add a shadow */
+}
+
+.button:hover {
+    background-color: #ff962e; /* Change background color to yellow */
+    color: var(--main-dark); /* Optionally change text color to dark */
+}
